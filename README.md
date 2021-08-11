@@ -12,7 +12,7 @@
 ## deployment links
 
 - sultan-basic-api-server --> https://sultan-basic-api-server.herokuapp.com/
-- PR --> https://github.com/sultan-elayan/basic-api-server/pull/1
+- PR --> https://github.com/sultan-elayan/basic-api-server/pull/2 
 - repo action --> https://github.com/sultan-elayan/basic-api-server/actions 
 
 ## MUL
