@@ -1,20 +1,37 @@
+'use strict';
+const server = require('../server');
+const supertest = require('supertest');
+const request = supertest(server.app);
 
-// 'use strict';
-// const server = require('../src/server');
-// const supertest = require('supertest');
-// const request = supertest(server.app);
+describe('My API Server', ()=> {
 
-// describe('My API Server Test ', () => {
-//   test('name = string ?', async () => {
-//     const query = 'Sultan';
-//     let response = await supertest(server.app).get(`/person?name=${query}`);
-//     expect(response.status).toBe(200);
-//   });
+    // scenarios
+    it('handles not found ', async () => {
+        
+        // add test
+        const response = await request.get('/asd'); 
+        expect(response.status).toEqual(404);
+    });
 
-//   test('check name ', async () => {
-//     const query = 'Sultan';
-//     let response = await supertest(server.app).get(`/person?name=${query}`);
-//     console.log('response.body', response.body);
-//     expect(response.body.name).toBe(query);
-//   });
-// });
+    //callbacks ---> Promises (Promise.then() ) ----> Async/Await
+    
+    it('error while getting data', async () => {
+        const response = await request.post('/error'); 
+        expect(response.status).toEqual(500);
+    });
+    
+    it('get data from /data ', async () => {
+        const response = await request.get('/data');
+        expect(response.status).toEqual(200);
+        expect(typeof response.body).toEqual('object'); // superagent 
+    });
+    
+    it('/ route works', async () => {
+        const response = await request.get('/'); 
+        expect(response.status).toEqual(200);
+        console.log(response.text);
+        expect(response.text).toEqual('hello world !!');
+    });
+
+
+});

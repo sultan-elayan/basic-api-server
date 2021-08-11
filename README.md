@@ -11,9 +11,10 @@
 
 ## deployment links
 
-- sultan-basic-api-server --> 
-- PR --> 
-- repo action --> 
+- sultan-basic-api-server --> https://sultan-basic-api-server.herokuapp.com/
+- PR --> https://github.com/sultan-elayan/basic-api-server/pull/1
+- repo action --> https://github.com/sultan-elayan/basic-api-server/actions 
 
 ## MUL
 
+![](lab-03.jpeg)
