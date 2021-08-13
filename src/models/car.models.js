@@ -5,12 +5,6 @@ const car = (sequelize, DataTypes) => {
        name: {
             type: DataTypes.STRING,
             allowNull: false
-        }, 
-        model: {
-            type: DataTypes.STRING
-        },
-        price: {
-            type: DataTypes.STRING
         }
     });
 }

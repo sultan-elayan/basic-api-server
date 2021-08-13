@@ -2,8 +2,8 @@
 
 const express = require('express');
 
-const router = express.Router();
 const {car} = require('../models/car.models');
+const router = express.Router();
 // add routes
 router.get('/car', getCar);
 router.get('/car/:id', getOneCar);
@@ -17,16 +17,6 @@ let getCar = async (req, res)=> {
     let car = await car.findAll();
     res.status(200).json(car);
 }
-
-
-// app.get('/person', validator, (req, res) => {
-//     const name = req.query.name;
-//     if (name) {
-//         res.json({name})
-//     } else {
-//         res.status(500).send('Something Broke!');
-//     }
-// });
 
 let getOneCar = async (req, res)=> {
     const id = parseInt(req.params.id); 

@@ -6,12 +6,6 @@ const driver = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         }, 
-        age: {
-            type: DataTypes.STRING
-        },
-        gender: {
-            type: DataTypes.STRING
-        }
     });
 }
 
